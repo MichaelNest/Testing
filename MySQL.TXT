@@ -1,0 +1,59 @@
+
+SHOW databases; ---  показать базы данных
+CREATE DATABASE test_db; --- создать БД
+DROP DATABASE shlack; --- удалить указанную БД
+USE test_bd; --- перейти в указанную БД
+SHOW tables; --- посмотреть таблицы в внутри БД
+CREATE TABLE table_name (id INT(11) NOT NULL PRIMARY KEY, fack VARCHAR(55) NELL, number INT(2) NULL);
+DESC table_name; --- посмотреть какие поля(столбцы) есть в таблице
+DROP TABLE table_name;
+
+INSERT INTO table_name (column_1, column_2, column_3) VALUES (1, "bio", 1)
+DELETE FROM table_name; --- удалятся все значения таблицы
+DELETE FROM table_name WHERE id = 5; --- удалится конкретная строка, у которой id=5
+ALTER TABLE table_name DROP COLUMN id; --- удалить весь столбец
+ALTER TABLE table_name ADD COLUMN new_column INT AFTER previews_column; --- создать столбец за указанным столбцом
+UPDATE table_name SET column_name='Vasia' WHERE column_name='Petia';
+
+SELECT * FROM table_name;
+SELECT DISTINCT column_name FROM table_name; --- вывод без повторяющихся значений
+SELECT * FROM table_name LIMIT 3; ---  вывод определенного количества значений
+SELECT coulumn_name AS N FROM table_name; --- временное призначення псевдонима столбцу
+SELECT colum_name1, column_name2 FROM table_name WHERE column_name1=x; --- выбор строк по значению столбца
+SELECT * FROM table_name WHERE column_name LIKE 'V%'; --- вывод всех строк у которых значение столбца начинается на 'V'
+'%V', 'V%', '_V', 'V_', 
+SELECT * FROM table_name WHERE column_name IS NULL; --- значения в столбце пустые
+SELECT * FROM table_name WHERE column_name BETWEEN x AND y; --- интервал значений
+SELECT * FROM table_name WHERE NOT column_name BETWEEN x AND y; --- интервал значений
+SELECT * FROM table_name WHERE column_name IN (x, y); --- конкретные значения
+SELECT * FROM table_name WHERE column_name ON (x, y); --- интервал
+SELECT * FROM table_name WHERE (column_1=x OR column_2=y) AND column_3=z; --- комбинирование
+SELECT * FROM table_name ORDER BY column_1; --- сортировка по алфавиту;
+SELECT * FROM table_name ORDER BY column_1 DESC; --- сортировка по алфавиту в обратном порядке
+SELECT AVG(column_name) FROM table_name; --- посчитает среднее значение из значений указанного столбца
+SELECT SUM(column_name) FROM table_name; --- посчитает сумму из значений указанного столбца
+SELECT MIN(column_name) AS min_number FROM table_name;
+SELECT MAX(column_name) AS max_number FROM table_name;
+SELECT COUNT(column_name) FROM table_name; --- количество ненулевых записей в указанном столбце
+
+SELECT table_one.name, table_two.last_name FROM table_one INNER JOIN table_two ON table_one.id=table_two.id; --- INNER JOIN
+--- выбираем столбцы для соединения, указываем таблицы для соединения, если поля id будум одинаковы
+SELECT table_one.name, table_two.last_name FROM table_one LEFT JOIN table_two ON table_one.id=table_two.id; --- LEFT JOIN
+SELECT table_on.name, table_two.last_name FROM table_one RIGHT JOIN table_two ON table_one.id=table_two.id; --- RIGHT JOIN
+
+SELECT name, last_name FROM table_one WHERE age IN (SELECT age FROM table_one WHERE id>1 AND age>21); --- встроенные запросы
+---------------------------------------------------------------------
+
+SELECT - извлекает данные из базы данных
+UPDATE - обновляет данные в базе данных
+DELETE - удаляет данные из базы данных
+INSERT INTO - вставляет новые данные в базу данных
+CREATE DATABASE - создает новую базу данных
+ALTER DATABASE - изменяет базу данных
+CREATE TABLE - создает новую таблицу
+ALTER TABLE - изменяет таблицу
+DROP TABLE - удаляет таблицу
+CREATE INDEX - создает индекс (ключ поиска)
+DROP INDEX - удаляет индекс
+
+

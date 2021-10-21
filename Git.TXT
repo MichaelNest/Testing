@@ -1,0 +1,17 @@
+https://git-scm.com/downloads ---  установка git
+
+C:\Users\Testing>copy NUL .gitconfig --- создание файла .gitconfig
+В Notepad++ делаем запись в файле .gitconfig:
+[user]
+	email=any_mail@gmail.com
+	user=any_user
+git config --list --global --- набераем это в командной строке и выведется запись из файла .gitconfig
+D: --- перейти в диск D
+dir --- посмотреть содержимое директории
+git clone https://github.com/MichaelNest/Testing.git --- сделать клонирование репозитория на комп
+git status --- войдя в клонированый репозиторий (в папку) можно проверить его состояние
+git add text_file1.txt --- указываем гиту что надо добавить новый файл или изменения в нем
+git commit -m 'First commit' --- коммитим изменения
+git push -u origin main --- толкаем наши изменения в репозиторий гитхаб (первый раз точно надо так, через авторизацию)
+git push --- толкаем наши изменения на гитхаб в последующие разы
+
