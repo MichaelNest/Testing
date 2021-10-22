@@ -11,6 +11,7 @@ DROP TABLE table_name;
 INSERT INTO table_name (column_1, column_2, column_3) VALUES (1, "bio", 1)
 DELETE FROM table_name; --- удалятся все значения таблицы
 DELETE FROM table_name WHERE id = 5; --- удалится конкретная строка, у которой id=5
+TRUNCATE TABLE table_name; --- удаляет все содержимое таблицы без возможности восстановить (ROLLBACK)
 ALTER TABLE table_name DROP COLUMN id; --- удалить весь столбец
 ALTER TABLE table_name ADD COLUMN new_column INT AFTER previews_column; --- создать столбец за указанным столбцом
 UPDATE table_name SET column_name='Vasia' WHERE column_name='Petia';
@@ -42,6 +43,10 @@ SELECT table_one.name, table_two.last_name FROM table_one LEFT JOIN table_two ON
 SELECT table_on.name, table_two.last_name FROM table_one RIGHT JOIN table_two ON table_one.id=table_two.id; --- RIGHT JOIN
 
 SELECT name, last_name FROM table_one WHERE age IN (SELECT age FROM table_one WHERE id>1 AND age>21); --- встроенные запросы
+
+SELECT COUNT(id), column_name FROM table_name GROUP BY coulumn_name; --- вывести столбци id и column_name, где для каждого (GROUP BY) column_name посчитать количество (COUNT)id
+SELECT COUNT(id), column_name FROM table_name GROUP BY coulumn_name ORDER BY COUNT(id) DESC; --- то же что и выше, но с сортировкой по убывания по столбцу COUNT(id)
+
 ---------------------------------------------------------------------
 
 SELECT - извлекает данные из базы данных
