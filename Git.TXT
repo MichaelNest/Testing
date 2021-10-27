@@ -44,6 +44,7 @@ git stash clear --- очистить буфер stash
 git branch branch_name --- создаем новую ветку
 git branch --- посмотреть все имеющиеся ветки
 git checkout branch_name --- переключится на указанную ветку
+git push -u origin first_branch --- делаем коммит новой ветки н удаленный репозиторий
 
 
 
