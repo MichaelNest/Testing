@@ -44,7 +44,19 @@ git stash clear --- очистить буфер stash
 git branch branch_name --- создаем новую ветку
 git branch --- посмотреть все имеющиеся ветки
 git checkout branch_name --- переключится на указанную ветку
-git push -u origin first_branch --- делаем коммит новой ветки н удаленный репозиторий
+git chechout - --- вернутся на главную ветку
+git push -u origin branch_name --- делаем коммит новой ветки н удаленный репозиторий
+git merge branch_name --- слить ветку в главную ветку (сначала перейти в главную ветку git checkout -)
+git push --- влить изменения от слияния в основную ветку удаленного репозитория
+git branch -m old_name_branch new_name_branch --- переименование ветки
+git push :old_name_branch --- удаление ветки с репозитория
+git push -u origin new_name_branch --- помещение в репозиторий ветки, которую переименовали в локальном репозитории
+git branch -d second_branch --- удаление ветки с локального репозитория
+git fetch origin second_branch --- вернуть из удаленного репозитория на локальный репозиторий удаленную ветку
+git checkout second_branch --- перейти на восстановленную ветку, чтоб она теперь отображалась в списке веток
+
+
+
 
 
 
