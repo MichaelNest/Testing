@@ -41,6 +41,10 @@ git stash --- откатить изменения с возможностью в
 git stash pop --- вернуть изменения из буфера stash
 git stash clear --- очистить буфер stash
 
+git branch branch_name --- создаем новую ветку
+git branch --- посмотреть все имеющиеся ветки
+git checkout branch_name --- переключится на указанную ветку
+
 
 
 
