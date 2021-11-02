@@ -4,7 +4,7 @@ CREATE DATABASE test_db; --- создать БД
 DROP DATABASE shlack; --- удалить указанную БД
 USE test_bd; --- перейти в указанную БД
 SHOW tables; --- посмотреть таблицы в внутри БД
-CREATE TABLE table_name (id INT(11) NOT NULL PRIMARY KEY, fack VARCHAR(55) NELL, number INT(2) NULL);
+CREATE TABLE table_name (id INT(11) NOT NULL PRIMARY KEY, fack VARCHAR(55) NULL, number INT(2) NULL);
 DESC table_name; --- посмотреть какие поля(столбцы) есть в таблице
 DROP TABLE table_name;
 
